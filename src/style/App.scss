@@ -1,0 +1,82 @@
+@import "./reset";
+@import "./variable";
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@800&family=Bree+Serif&family=Lato:wght@300;400;700&display=swap");
+.wrapper {
+  display: flex;
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 100vh;
+  height: 100%;
+  color: $textCol;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  .sideMenu__toogler {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    left: 13px;
+    top: 15px;
+    z-index: 1000;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+    & span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+      &.sideMenu__toogler span:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2) {
+        top: 10px;
+      }
+      &:nth-child(3) {
+        top: 20px;
+      }
+    }
+    &.open {
+      & span:nth-child(1) {
+        top: 10px;
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+      & span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+      }
+      & span:nth-child(3) {
+        top: 10px;
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  a {
+    color: $textCol;
+  }
+}

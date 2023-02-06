@@ -1,0 +1,53 @@
+@import "../../style/variable";
+.content {
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: linear-gradient(0deg, #161616, #161616),
+    linear-gradient(0deg, #e1e1e1, #e1e1e1);
+  border: 1px solid #1d1c1c;
+  border-radius: 5px;
+  padding: 30px 30px 20px 30px;
+  line-height: 22px;
+  .title {
+    font-size: 20px;
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    input {
+      height: 45px;
+    }
+    textarea {
+      resize: none;
+      height: 140px;
+    }
+    .input {
+      padding: 10px;
+      background-color: #16161600;
+      border: 1px solid #e1e1e1;
+      border-radius: 6px;
+      color: $textCol;
+    }
+  }
+  .row {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    display: flex;
+    .save {
+      width: 110px;
+      height: 41px;
+    }
+    .cancel {
+      cursor: pointer;
+      color: $red;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import "../style/variable";
+
+.sideMenu-enter {
+  width: 0;
+  height: 0;
+}
+.sideMenu-enter-active {
+  width: 320px;
+  height: 10%;
+  transition: all 0.5s ease;
+}
+.sideMenu-enter-done {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.sideMenu-exit {
+  width: 320px;
+  height: 10%;
+  transition: all 0.5s ease;
+}
+
+.sideMenu-exit-active {
+  width: 0;
+  height: 0;
+  transition: all 0.5s ease;
+}
+.sideMenu-exit-done {
+  width: 320px;
+  height: 10%;
+  transition: all 0.5s ease;
+}
+
+.sideMenu__container-enter {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.sideMenu__container-enter-active {
+  opacity: 0;
+
+  transition: all 0.3s;
+}
+.sideMenu__container-enter-done {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.sideMenu__container-exit {
+  transition: all 0.3s;
+}
+.sideMenu__container-exit-active {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.sideMenu__container-exit-done {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.sideMenu {
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+
+  // animation: hiden 0.75s forwards;
+
+  .sideMenu__content {
+    position: relative;
+    width: 320px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.833);
+
+    .sideMenu__container {
+      position: relative;
+      width: 80%;
+      height: 100%;
+      padding: 40px 0;
+      margin: 0 auto;
+
+      .sideMenu__titel {
+        color: $red;
+        word-wrap: break-word;
+        font-family: "Archivo", sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 44px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .sideMenu__search {
+        margin-bottom: 40px;
+        height: 35px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        border: 1px solid rgba(217, 217, 217, 0.3);
+        border-radius: 6px;
+      }
+      .navButton {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        gap: 15px;
+        margin-bottom: 20px;
+        height: 41px;
+        color: $textCol;
+        transition: all 0.5s ease-in-out;
+        border-radius: 6px;
+
+        &:hover {
+          background-color: #141414;
+        }
+      }
+      .createNewList {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 40px;
+      }
+      .sideMenu__line {
+        height: 1px;
+        background: rgba(217, 217, 217, 0.3);
+        margin-bottom: 20px;
+      }
+      .MyList {
+        display: flex;
+        flex-direction: column;
+      }
+      .sideMenu__profile {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+        height: 40px;
+      }
+    }
+  }
+}
+.active {
+  background: #1f1f1f;
+}

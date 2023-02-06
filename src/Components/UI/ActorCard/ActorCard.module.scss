@@ -1,0 +1,45 @@
+@import "../../../style/variable";
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  max-width: 150px;
+  width: 100%;
+  height: 300px;
+  gap: 10px;
+  padding-bottom: 5px;
+  word-wrap: break-word;
+  background-color: $gray;
+  -webkit-box-shadow: 0px 53px 145px -67px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 53px 145px -67px rgba(255, 255, 255, 1);
+  box-shadow: 0px 53px 145px -67px rgba(255, 255, 255, 1);
+  .photo {
+    width: 150px;
+    height: 210px;
+    img {
+      width: 100%;
+      height: 210px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 125px;
+    height: 100%;
+    margin: 0 auto;
+
+    .name {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+    }
+    .character {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}

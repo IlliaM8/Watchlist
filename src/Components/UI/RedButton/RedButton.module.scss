@@ -1,0 +1,19 @@
+@import "../../../style/variable";
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  height: 100%;
+  background-color: $red;
+  line-height: 20px;
+  border-radius: 6px;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background: #e68d8f;
+    border-radius: 6px;
+  }
+}

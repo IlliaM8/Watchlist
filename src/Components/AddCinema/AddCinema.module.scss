@@ -1,0 +1,71 @@
+@import "../../style/variable";
+.content {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(0deg, #161616, #161616),
+    linear-gradient(0deg, #e1e1e1, #e1e1e1);
+  border: 1px solid #1d1c1c;
+  border-radius: 5px;
+  padding: 30px 60px 30px 30px;
+  line-height: 22px;
+  .row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    p {
+      font-weight: 700;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 19px;
+    }
+  }
+  .listContainer {
+    height: 120px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    overflow: auto;
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: $grayback;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: aliceblue;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 150px;
+      border-radius: 5px;
+      background-color: rgb(57, 58, 58);
+    }
+    .list {
+      background: #000000;
+      border-radius: 6px;
+      height: 40px;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+  }
+  .button {
+    position: relative;
+    width: 250px;
+    height: 40px;
+    span {
+      position: absolute;
+      top: 9px;
+      left: 10px;
+      width: 22px;
+      height: 22px;
+      background: #d9d9d9;
+      border-radius: 8px;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      text-align: center;
+      color: black;
+    }
+  }
+}

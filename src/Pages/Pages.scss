@@ -1,0 +1,197 @@
+@import "../style/variable";
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 20px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+.home {
+  width: 100%;
+  background-color: $grayback;
+  word-wrap: break-word;
+  .home__container {
+    .home__title {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 35px;
+    }
+    .home__search {
+      width: 100%;
+      margin: 32px 0 32px 0;
+      position: relative;
+    }
+  }
+}
+.movieDetail {
+  width: 100%;
+  background-color: $grayback;
+  .movieDetail__container {
+    .movieDetail__main {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 45px;
+      margin-bottom: 40px;
+      .main__poster {
+        width: 300px;
+        height: auto;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          object-fit: cover;
+        }
+      }
+      .main__overview {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        padding-right: 10px;
+        .main__title {
+          font-size: 36px;
+          line-height: 43px;
+          margin-bottom: 10px;
+          p {
+            font-weight: 300;
+            font-size: 36px;
+            line-height: 43px;
+          }
+        }
+        .main__genres-runtime {
+          display: flex;
+          text-align: center;
+          line-height: 19px;
+
+          gap: 15px;
+          .main__genres {
+            margin-bottom: 50px;
+          }
+          .main__runtime {
+          }
+        }
+        .main__overview-subtitle {
+          margin-bottom: 10px;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          color: white;
+        }
+        .main__overview-text {
+          line-height: 19px;
+          margin-bottom: 56px;
+        }
+        .main__row {
+          display: flex;
+          gap: 50px;
+          align-items: center;
+          .main__raiting {
+            width: 81px;
+            height: 95px;
+          }
+          .main__button {
+            display: flex;
+            flex: 1 1 auto;
+            max-width: 200px;
+            height: 60px;
+          }
+        }
+      }
+    }
+    .movieDetail__cast-subtitle {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .movieDetail__cast-container {
+      display: flex;
+      padding: 10px;
+      height: 350px;
+      gap: 40px;
+      overflow-x: scroll;
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: $grayback;
+      }
+
+      &::-webkit-scrollbar {
+        height: 10px;
+        background-color: aliceblue;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 150px;
+        border-radius: 5px;
+        background-color: rgb(57, 58, 58);
+      }
+    }
+  }
+}
+
+.history {
+  width: 100%;
+  background-color: $grayback;
+  word-wrap: break-word;
+  .history__container {
+    position: relative;
+    .history__clear-button {
+      position: absolute;
+      right: 0;
+      text-decoration-line: underline;
+      color: $red;
+      transition: color 0.5s ease;
+      cursor: pointer;
+      &:hover {
+        color: #e68d8f;
+      }
+    }
+  }
+}
+
+.CreateNewWatchlist {
+  width: 100%;
+  background-color: $grayback;
+  .CreateNewWatchlist__container {
+  }
+}
+
+.watclist {
+  width: 100%;
+  background-color: $grayback;
+  word-wrap: break-word;
+  .watchlist__title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    margin-bottom: 25px;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  .watchlist__descr {
+    margin-bottom: 30px;
+  }
+  .watchlist__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 30px;
+    .row__item-qnt {
+      max-width: 168px;
+      height: 121px;
+    }
+    .row__runtime {
+      max-width: 253px;
+      height: 121px;
+    }
+    .row__score {
+      max-width: 190px;
+      height: 121px;
+    }
+  }
+}

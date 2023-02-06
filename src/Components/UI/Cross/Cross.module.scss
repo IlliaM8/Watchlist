@@ -1,0 +1,27 @@
+.cross {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    content: " ";
+    height: 100%;
+    width: 2px;
+    background-color: rgb(255, 252, 252);
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

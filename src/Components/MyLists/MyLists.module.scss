@@ -1,0 +1,66 @@
+@import "../../style/variable";
+.myList {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  .myList__title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(154, 154, 154, 1);
+    margin-bottom: 10px;
+  }
+  .myList__lists {
+    height: 200px;
+    padding-right: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: $grayback;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: aliceblue;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 150px;
+      border-radius: 5px;
+      background-color: rgb(57, 58, 58);
+    }
+    .list {
+      display: block;
+      height: 40px;
+      margin-bottom: 5px;
+      border-radius: 6px;
+
+      &__enter {
+        transform: translate(-100%);
+        opacity: 0;
+      }
+      &__enterActive {
+        opacity: 1;
+        transform: translate(0);
+        transition: all 500ms ease-in;
+      }
+      &__exist {
+        opacity: 1;
+      }
+      &__existActive {
+        transform: translate(100%);
+        opacity: 0;
+        transition: all 500ms ease-in;
+      }
+    }
+    .activeList {
+      display: block;
+      height: 40px;
+      margin-bottom: 5px;
+      border-radius: 6px;
+
+      background: #1f1f1f;
+    }
+  }
+}
